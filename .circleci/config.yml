@@ -16,7 +16,7 @@ jobs:
                 pwd
       - run: 
             command: |
-                ls * -l
+                ls -l
                 
             
 
