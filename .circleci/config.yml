@@ -16,23 +16,12 @@ jobs:
                 pwd
       - run: 
             command: |
-<<<<<<< HEAD
-                ls 
-      - run: 
-            command: |
-                cd ..
-      - run: 
-            command: |
-                cd ..
+                cd /home
       - run: 
             command: |
                 pwd
       - run: 
             command: |
                 ls           
-=======
-                ls
-                
->>>>>>> 7c5049ae8cbd2c2434c22c7ae672ebf5a1140136
             
 
