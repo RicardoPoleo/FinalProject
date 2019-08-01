@@ -1,12 +1,7 @@
-# Java Gradle CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/openjdk:8-jdk
 
       # Specify service dependencies here if necessary
@@ -14,7 +9,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: ~/TestProject
+    working_directory: ~/FinalProject
 
     environment:
       # Customize the JVM maximum heap limit
