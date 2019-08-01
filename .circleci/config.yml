@@ -13,6 +13,6 @@ jobs:
     steps:
       - run: 
             command: |
-                cd /FinalProject/src
+                cd ../src
             
 
