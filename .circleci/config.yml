@@ -17,11 +17,8 @@ jobs:
       TERM: dumb
 
     steps:
-      - checkout
-
       - run: echo "Final Project"
       command: |
             cd src/TestForm
-            # Get list of classnames of tests that should run on this node
             circleci tests glob "*.java"
 
