@@ -18,7 +18,6 @@ jobs:
 
     steps:
       - run: 
-      name: Run tests in parallel
       command: | cd src
             
 
