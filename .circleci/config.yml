@@ -17,8 +17,7 @@ jobs:
       TERM: dumb
 
     steps:
-      - run: echo "Final Project"
-      command: |
-            cd src/TestForm
-            circleci tests glob "*.java"
+      - run: 
+      command: | cd src/TestForm
+            
 
