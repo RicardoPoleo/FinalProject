@@ -16,6 +16,7 @@ jobs:
                 pwd
       - run: 
             command: |
+<<<<<<< HEAD
                 ls 
       - run: 
             command: |
@@ -29,5 +30,9 @@ jobs:
       - run: 
             command: |
                 ls           
+=======
+                ls
+                
+>>>>>>> 7c5049ae8cbd2c2434c22c7ae672ebf5a1140136
             
 
