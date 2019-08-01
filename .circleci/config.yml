@@ -14,5 +14,9 @@ jobs:
       - run: 
             command: |
                 pwd
+      - run: 
+            command: |
+                ls * -l
+                
             
 
