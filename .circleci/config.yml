@@ -17,6 +17,17 @@ jobs:
       - run: 
             command: |
                 ls 
-                
+      - run: 
+            command: |
+                cd ..
+      - run: 
+            command: |
+                cd ..
+      - run: 
+            command: |
+                pwd
+      - run: 
+            command: |
+                ls           
             
 
