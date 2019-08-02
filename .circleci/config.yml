@@ -16,7 +16,7 @@ jobs:
                 pwd
       - run: 
             command: |
-                cd "../../.."        
+                cd "/home/src/TestForm"        
       - run: 
             command: |
                 pwd      
