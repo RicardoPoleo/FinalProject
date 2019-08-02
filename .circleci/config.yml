@@ -15,8 +15,8 @@ jobs:
       - checkout
       - persist_to_workspace:
             root: /workspace
-      - attach_workspace:
-            at: /workspace
+            paths:
+            - FinalProject/src/TestForm
       - run: 
             command: |
                 pwd      
