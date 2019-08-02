@@ -14,9 +14,9 @@ jobs:
                 - "f0:b0:30:88:67:cb:2c:7b:75:f0:0b:2d:26:a6:4e:b2"
       - checkout
       - persist_to_workspace:
-            root: /Project
+            root: /home/circleci/project
             paths:
-            - Project/src/TestForm
+            - project/src/TestForm
       - run: 
             command: |
                 pwd      
