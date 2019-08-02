@@ -13,8 +13,10 @@ jobs:
             fingerprints:
                 - "f0:b0:30:88:67:cb:2c:7b:75:f0:0b:2d:26:a6:4e:b2"
       - checkout
+      - persist_to_workspace:
+            root: /workspace
       - attach_workspace:
-        at: /workspace
+            at: /workspace
       - run: 
             command: |
                 pwd      
