@@ -16,6 +16,8 @@ jobs:
                 pwd
       - run: 
             command: |
-                ls           
-            
+                cd ../../..        
+      - run: 
+            command: |
+                pwd      
 
