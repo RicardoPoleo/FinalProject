@@ -16,7 +16,7 @@ jobs:
                 pwd
       - run: 
             command: |
-                cd ../../..        
+                cd "../../.."        
       - run: 
             command: |
                 pwd      
