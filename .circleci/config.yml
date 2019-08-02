@@ -12,10 +12,11 @@ jobs:
       - add_ssh_keys:
             fingerprints:
                 - "f0:b0:30:88:67:cb:2c:7b:75:f0:0b:2d:26:a6:4e:b2"
-      - run: 
-            command: |
-                cd \
-      - run: 
+      - store_artifacts:
+            path: home/src/TestForm
+            destination: prefix
+     
+     - run: 
             command: |
                 pwd      
 
