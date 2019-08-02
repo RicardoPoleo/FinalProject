@@ -16,7 +16,7 @@ jobs:
                 pwd
       - run: 
             command: |
-                cd /home
+                cd /home/
       - run: 
             command: |
                 pwd
