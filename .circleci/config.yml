@@ -7,20 +7,20 @@ jobs:
     environment:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
-
+       
     steps:
       - add_ssh_keys:
             fingerprints:
                 - "f0:b0:30:88:67:cb:2c:7b:75:f0:0b:2d:26:a6:4e:b2"
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
+      - attach_workspace:
+        at: /workspace
       - run: 
             command: |
                 pwd      
       - run: 
             command: |
-                cd /
+                cd /workspace
       - run: 
             command: |
-                pwd
+                ls -l
