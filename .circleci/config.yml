@@ -20,3 +20,6 @@ jobs:
       - run: 
             command: |
                 ls src/* -l
+      - run: 
+            command: |
+                circleci tests glob "src/TestForm/*.java"     
