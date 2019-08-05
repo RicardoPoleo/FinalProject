@@ -19,4 +19,4 @@ jobs:
                 pwd  
       - run: 
             command: |
-                ls src/TestForm/*.java -l
+                ls src/* -l
