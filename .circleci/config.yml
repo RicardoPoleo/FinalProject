@@ -16,7 +16,7 @@ jobs:
      
       - run: 
             command: |
-                pwd      
+                cd src    
       - run: 
             command: |
                 ls -l
