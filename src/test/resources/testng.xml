@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="FinalTestNg" parallel="false">
+  <test name="FinalTestNgMavenTest">
+    <classes>
+      <class name="TestForm.DataDriveFormTest"/>
+      <class name="TestForm.EditAccountFormTest"/>
+      <class name="TestForm.RegisterOrderFormTest"/>
+      <class name="TestForm.SearchProductFormTest"/>
+      <class name="TestForm.SignUpFormTest"/>
+    </classes>
+  </test>
+</suite>
