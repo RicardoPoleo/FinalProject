@@ -18,7 +18,7 @@ jobs: # a collection of steps
       - run:
           name: Start Selenium
           command: |
-            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+            java -jar selenium-server-standalone-3.5.3.jar -log src/test/selenium.log
           background: true
 
       - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
