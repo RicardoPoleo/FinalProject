@@ -14,6 +14,11 @@ jobs: # a collection of steps
     steps: # a collection of executable commands
       
       - checkout # check out source code to working directory
+      
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v1-dependencies-
 
       - run:
           name: Install and start geckodriver
@@ -24,11 +29,12 @@ jobs: # a collection of steps
             chmod +x geckodriver &&
             sudo mv geckodriver src/
         # https://github.com/circleci/circleci-images/issues/86
-       - run:
+      
+      - run:
           name: Install the latest firefox
           command: |
             sudo apt-get remove firefox-mozilla-build binutils &&
-            sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main' >> /etc/apt/sources.list" &&
+            sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main' >> src/TestForm/sources.list" &&
             sudo apt-get update &&
             sudo apt-get install -t sid firefox &&
             firefox --version
