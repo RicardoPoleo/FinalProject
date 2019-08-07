@@ -34,8 +34,8 @@ jobs: # a collection of steps
             sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main' >> src/TestForm/sources.list" &&
             sudo apt-get update &&
             sudo apt-get install -y xvfb
-          command:
-         background: true
+          background: true
+        
         # firefox --version
 
 
