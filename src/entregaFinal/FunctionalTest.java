@@ -17,7 +17,7 @@ public class FunctionalTest {
 	
 	@BeforeClass
 	public static void setUp(){
-		System.setProperty("webdriver.gecko.driver","src\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","src//geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
