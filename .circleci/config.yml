@@ -7,7 +7,7 @@ jobs: # a collection of steps
     docker: # run the steps with Docker
       - image: circleci/openjdk:8-jdk-stretch # ...with this image as the primary container; this is where all `steps` will run
          
-      - image: selenium/standalone-firefox:3.14.0
+      - image: selenium/standalone-firefox:3.141.59
         
     steps: # a collection of executable commands
       
