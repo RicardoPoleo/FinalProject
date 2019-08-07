@@ -45,7 +45,7 @@ jobs: # a collection of steps
           command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
       - run:
           name: Start Selenium
-          command: java -jar selenium-server-standalone-3.5.3.jar -log selenium.log
+          command: java -jar selenium-server-standalone-3.5.3.jar 
           background: true
 
       - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
