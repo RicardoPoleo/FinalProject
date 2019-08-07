@@ -30,9 +30,9 @@ jobs: # a collection of steps
       
       - run:
           name: Install the latest firefox
-          Path: project/
+          Path: /project
           command: |
-            sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main' >> " &&
+            sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main'" &&
             sudo apt-get update &&
             sudo apt-get install -y xvfb
           background: true
