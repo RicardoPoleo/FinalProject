@@ -18,8 +18,6 @@ import entregaFinal.SignUpMyAccount;
 import entregaFinal.SignUpPassword;
 
 
-
-
 public class EditAccountFormTest extends FunctionalTest {
 
 	@Test
