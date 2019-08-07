@@ -12,32 +12,28 @@ jobs: # a collection of steps
         
         
     steps: # a collection of executable commands
-
-      - commands:
-        install-browser-tools:
-        description: | 
-        Install GeckoDriver
-        
-        parameters:
-        
-        geckodriver-install-dir:
-        
-        default: src/
-        
-        description: |
-          Directory in which to install Geckodriver
-        
-        type: string
-        
-        geckodriver-version:
-        
-        default: latest
-        
-        description: |
-          Version of Geckodriver to install
-        type: string
-
+      
       - checkout # check out source code to working directory
+
+      - run:
+          name: Install and start geckodriver
+          command: |
+            
+            wget https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz &&
+            tar -xvzf geckodriver-v0.20.1-linux64.tar.gz &&
+            chmod +x geckodriver &&
+            sudo mv geckodriver src/
+        # https://github.com/circleci/circleci-images/issues/86
+       - run:
+          name: Install the latest firefox
+          command: |
+            sudo apt-get remove firefox-mozilla-build binutils &&
+            sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main' >> /etc/apt/sources.list" &&
+            sudo apt-get update &&
+            sudo apt-get install -t sid firefox &&
+            firefox --version
+
+
 
       - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
