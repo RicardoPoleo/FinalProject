@@ -7,7 +7,7 @@ jobs: # a collection of steps
     docker: # run the steps with Docker
       - image: circleci/openjdk:8-jdk-stretch # ...with this image as the primary container; this is where all `steps` will run
          
-      
+      - image: selenium/standalone-firefox:3.141.59
         
     steps: # a collection of executable commands
       
@@ -40,14 +40,7 @@ jobs: # a collection of steps
         
         # firefox --version
 
-      - run:
-          name: Download Selenium
-          command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
-      - run:
-          name: Start Selenium
-          command: java -jar selenium-server-standalone-3.5.3.jar 
-          background: true
-
+      
       - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
           key: test-form-{{ checksum "pom.xml" }}      
