@@ -12,7 +12,6 @@ import entregaFinal.SignUpMyAccount;
 import entregaFinal.SignUpPassword;
 
 
-
 public class SignUpFormTest extends FunctionalTest {
 
 	@Test

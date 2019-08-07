@@ -21,10 +21,12 @@ import entregaFinal.SignUpMyAccount;
 import entregaFinal.SignUpPassword;
 
 
-public class DataDriveFormTest extends FunctionalTest {
+
+
+public class DataDriveFormTest extends FunctionalTest  {
 
 	@Test
-	public void DataDriveOrder() throws IOException {
+	public void DataDriveOrder() throws IOException{
 				
 		
 		File fdata=new File("src\\data.xlsx");
