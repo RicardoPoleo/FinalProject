@@ -28,14 +28,14 @@ jobs: # a collection of steps
             sudo mv geckodriver src/
         # https://github.com/circleci/circleci-images/issues/86
       
-      - run:
-          name: Install the latest firefox
-          Path: project/
-          command: |
-            sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main'" &&
-            sudo apt-get update &&
-            sudo apt-get install -y xvfb
-          background: true
+     # - run:
+     #     name: Install the latest firefox
+     #     Path: project/
+     #     command: |
+     #       sudo sh -c "echo 'deb http://ftp.hr.debian.org/debian sid main'" &&
+     #       sudo apt-get update &&
+     #       sudo apt-get install -y xvfb
+     #     background: true
           
         
         # firefox --version
