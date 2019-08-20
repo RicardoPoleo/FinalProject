@@ -2,14 +2,10 @@ package entregaFinal;
 
 import java.io.File;
 import java.net.MalformedURLException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.GeckoDriverService;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -25,11 +21,7 @@ public class FunctionalTest {
 	public static void setUp() throws MalformedURLException {
 		File gecko = new File("src//geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver",gecko.getAbsolutePath());
-		FirefoxBinary binary = new FirefoxBinary();
-        binary.addCommandLineOptions("-headless");
-        Map<String, String> environmentVariables = new HashMap<>();
-		environmentVariables.put("DISPLAY",":80");
-		driver = new FirefoxDriver(new GeckoDriverService.Builder().usingFirefoxBinary(binary).withEnvironment(environmentVariables).build());	
+		driver = new FirefoxDriver();	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 	}
 	
