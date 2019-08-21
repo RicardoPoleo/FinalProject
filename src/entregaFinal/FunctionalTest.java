@@ -23,10 +23,9 @@ public class FunctionalTest {
 		File gecko = new File("geckodriver/geckodriver");
 		System.setProperty("webdriver.gecko.driver",gecko.getAbsolutePath());
 		final FirefoxOptions options = new FirefoxOptions();
-		options.setBinary("firefox")
-        	options.setHeadless(false);
+		options.setHeadless(false);
 		options.setCapability("marionette", true);
-                final WebDriver driver = new FirefoxDriver(options);
+                driver = new FirefoxDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 	}
 	
