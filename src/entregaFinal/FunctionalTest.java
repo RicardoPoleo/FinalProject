@@ -24,6 +24,7 @@ public class FunctionalTest {
 		System.setProperty("webdriver.gecko.driver",gecko.getAbsolutePath());
 		final FirefoxOptions options = new FirefoxOptions();
         	options.setHeadless(false);
+		options.setCapability("marionette", true);
                 driver = new FirefoxDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 	}
