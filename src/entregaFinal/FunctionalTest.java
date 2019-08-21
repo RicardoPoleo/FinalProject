@@ -19,7 +19,7 @@ public class FunctionalTest {
 	
 	@BeforeClass
 	public static void setUp() throws MalformedURLException {
-		File gecko = new File("geckodriver//geckodriver.exe");
+		File gecko = new File("geckodriver/geckodriver");
 		System.setProperty("webdriver.gecko.driver",gecko.getAbsolutePath());
 		driver = new FirefoxDriver();	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
