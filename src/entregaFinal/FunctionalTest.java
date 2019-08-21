@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +22,9 @@ public class FunctionalTest {
 	public static void setUp() throws MalformedURLException {
 		File gecko = new File("geckodriver/geckodriver");
 		System.setProperty("webdriver.gecko.driver",gecko.getAbsolutePath());
-		driver = new FirefoxDriver();	
+		final FirefoxOptions options = new FirefoxOptions();
+        	options.setHeadless(false);
+                driver = new FirefoxDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 	}
 	
