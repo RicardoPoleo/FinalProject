@@ -8,5 +8,4 @@ before_install:
  - export PATH=$PATH:$PWD/geckodriver
  - echo "Extracting firefox and setting PATH variable..."
  - tar -xjf /tmp/firefox-68.0.2.tar.bz2 --directory /tmp
- - export PATH="/tmp/firefox:$PATH"
- - ls /tmp -l
+ - export PATH=$PATH:$PWD/tmp
