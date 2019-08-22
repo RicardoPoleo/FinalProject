@@ -23,7 +23,7 @@ public class FunctionalTest {
 		File gecko = new File("geckodriver/geckodriver");
 		System.setProperty("webdriver.gecko.driver",gecko.getAbsolutePath());
 		final FirefoxOptions options = new FirefoxOptions();
-		options.setBinary("/tmp/firefox");
+		options.setBinary("tmp/firefox");
 		options.setHeadless(false);
 		options.setCapability("marionette", true);
                 driver = new FirefoxDriver(options);
